@@ -4,39 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateChallenge">
+    tools:context=".CreateChallenge"
+    android:background="#FFF">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@drawable/header"
         app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="15dp">
+        android:layout_marginBottom="16dp">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="40dp"
             android:onClick="goBackChallenges"
             android:paddingStart="16dp"
-            android:text="Back"
+            android:text="Назад"
+            android:textColor="#000"
+            android:fontFamily="sans-serif"
             app:icon="@drawable/ic_back_24"
-            tools:layout_editor_absoluteY="12dp" />
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="#FFF"
+            app:iconTint="#000"/>
 
         <TextView
-            android:layout_width="260dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:text="Create Challenge"
-            android:textColor="@color/white"
+            android:text="Новий Челендж"
+            android:textColor="#000000"
             android:textSize="20sp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="18dp"
-            android:paddingStart="38dp"/>
+            android:paddingStart="30dp"/>
 
     </com.google.android.material.appbar.MaterialToolbar>
 
@@ -49,7 +54,7 @@
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="Challenge title"
+        android:hint="Назва челенджу"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
@@ -68,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="Choose a deadline date:"
+        android:text="Вибери дату дедлайну:"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -83,7 +88,7 @@
         android:gravity="start|top"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:hint="Write your goals"
+        android:hint="Опиши свої цілі"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.079"
@@ -95,10 +100,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
-        android:text="Add Challenge"
+        android:fontFamily="sans-serif"
+        android:text="Створити"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#000"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

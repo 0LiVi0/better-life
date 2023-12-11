@@ -5,39 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SelfCare"
-    android:background="@color/white">
+    android:background="#FFF">
+
+    <!-- TODO: optimize images -->
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:background="?attr/colorPrimary"
+        android:background="@drawable/header"
         app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="16dp">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="40dp"
             android:onClick="openHome"
             android:paddingStart="16dp"
-            android:text="Back"
+            android:text="Назад"
+            android:textColor="#000"
+            android:fontFamily="sans-serif"
             app:icon="@drawable/ic_back_24"
-            tools:layout_editor_absoluteY="12dp" />
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="#FFF"
+            app:iconTint="#000"/>
 
         <TextView
-            android:layout_width="210dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:paddingStart="64dp"
-            android:text="Self-care"
-            android:textColor="@color/white"
+            android:text="Добробут"
+            android:textColor="#000000"
             android:textSize="20sp"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="18dp" />
+            tools:layout_editor_absoluteY="18dp"
+            android:paddingStart="50dp"/>
 
     </com.google.android.material.appbar.MaterialToolbar>
 
@@ -57,9 +63,10 @@
             android:id="@+id/imageConsultations"
             android:layout_width="match_parent"
             android:layout_height="117dp"
-            android:scaleType="fitXY"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
-            android:background="@color/black"/>
+            android:scaleType="centerCrop"
+            android:src="@raw/consultation"
+            android:background="@drawable/curve_shape"
+            android:clipToOutline="true"/>
 
         <Button
             android:id="@+id/openConsultation"
@@ -67,7 +74,9 @@
             android:layout_height="40dp"
             android:layout_gravity="bottom"
             android:onClick="openBookConsultation"
-            android:text="Book Consultaion" />
+            android:text="Забронювати консультацію"
+            android:fontFamily="sans-serif"
+            android:backgroundTint="#000"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -89,15 +98,18 @@
             android:layout_height="40dp"
             android:layout_gravity="bottom"
             android:onClick="openChallenges"
-            android:text="Challenges" />
+            android:text="Челенджі"
+            android:fontFamily="sans-serif"
+            android:backgroundTint="#000"/>
 
         <ImageView
             android:id="@+id/imageChallenge"
             android:layout_width="match_parent"
             android:layout_height="117dp"
-            android:scaleType="fitXY"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
-            android:background="@color/black"/>
+            android:scaleType="centerCrop"
+            android:src="@raw/challenge"
+            android:background="@drawable/curve_shape"
+            android:clipToOutline="true"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -117,17 +129,20 @@
             android:id="@+id/openSleepTime"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Track sleeping time"
+            android:text="Відслідкувати час сну"
+            android:fontFamily="sans-serif"
             android:layout_gravity="bottom"
-            android:onClick="openSleepTracking"/>
+            android:onClick="openSleepTracking"
+            android:backgroundTint="#000"/>
 
         <ImageView
             android:id="@+id/imageSleepTime"
             android:layout_width="match_parent"
             android:layout_height="117dp"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
-            android:scaleType="fitXY"
-            android:background="@color/black"/>
+            android:src="@raw/sleep"
+            android:scaleType="centerCrop"
+            android:background="@drawable/curve_shape"
+            android:clipToOutline="true" />
 
     </androidx.cardview.widget.CardView>
 
@@ -147,17 +162,18 @@
             android:id="@+id/openScreenTime"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Phone Usage"
+            android:text="Використання телефону"
             android:layout_gravity="bottom"
-            android:enabled="false"/>
+            android:enabled="false" />
 
         <ImageView
             android:id="@+id/imageScreenTime"
             android:layout_width="match_parent"
             android:layout_height="117dp"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
-            android:scaleType="fitXY"
-            android:background="@color/black"/>
+            android:src="@raw/phone"
+            android:scaleType="centerCrop"
+            android:background="@drawable/curve_shape"
+            android:clipToOutline="true" />
 
     </androidx.cardview.widget.CardView>
 

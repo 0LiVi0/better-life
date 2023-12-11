@@ -4,39 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateNutrition">
+    tools:context=".CreateNutrition"
+    android:background="#FFF">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:background="?attr/colorPrimary"
+        android:background="@drawable/header"
         app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="16dp">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="40dp"
             android:onClick="goBackNutrition"
             android:paddingStart="16dp"
-            android:text="Back"
+            android:text="Назад"
+            android:textColor="#000"
+            android:fontFamily="sans-serif"
             app:icon="@drawable/ic_back_24"
-            tools:layout_editor_absoluteY="12dp" />
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="#FFF"
+            app:iconTint="#000"/>
 
         <TextView
-            android:layout_width="210dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:paddingStart="45dp"
-            android:text="Create Nutrition"
-            android:textColor="@color/white"
+            android:text="Нове Харчування"
+            android:textColor="#000000"
             android:textSize="20sp"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="18dp" />
+            tools:layout_editor_absoluteY="18dp"
+            android:paddingStart="10dp"/>
 
     </com.google.android.material.appbar.MaterialToolbar>
 
@@ -49,7 +54,7 @@
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="Meal name"
+        android:hint="Назва страви"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
@@ -62,7 +67,7 @@
         android:layout_marginTop="53dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Meal weight (g)"
+        android:hint="Вага страви (г)"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -76,7 +81,7 @@
         android:layout_marginTop="53dp"
         android:layout_marginEnd="12dp"
         android:ems="10"
-        android:hint="Proteins per 100g"
+        android:hint="Протеїни на 100г"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mealWeight" />
@@ -88,7 +93,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="60dp"
         android:ems="10"
-        android:hint="Carbs oer 100g"
+        android:hint="Вуглеводи на 100г"
         android:inputType="text"
         app:layout_constraintEnd_toStartOf="@+id/mealFats"
         app:layout_constraintHorizontal_bias="0.0"
@@ -101,7 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="53dp"
         android:ems="10"
-        android:hint="Calories per 100g"
+        android:hint="Калорії на 100г"
         android:inputType="text"
         app:layout_constraintEnd_toStartOf="@+id/mealProts"
         app:layout_constraintHorizontal_bias="0.306"
@@ -116,7 +121,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="12dp"
         android:ems="10"
-        android:hint="Fats per 100g"
+        android:hint="Жири на 100г"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/mealCarbs"
@@ -128,9 +133,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
         android:onClick="addNewMeal"
-        android:text="Add meal"
+        android:text="Додати страву"
+        android:fontFamily="sans-serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#000"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

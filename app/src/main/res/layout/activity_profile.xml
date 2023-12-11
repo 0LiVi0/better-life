@@ -5,38 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Profile"
-    android:background="@color/white">
+    android:background="#FFF">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@drawable/header"
         app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="16dp">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="40dp"
             android:onClick="openHome"
             android:paddingStart="16dp"
-            android:text="Back"
+            android:text="Назад"
+            android:textColor="#000"
+            android:fontFamily="sans-serif"
             app:icon="@drawable/ic_back_24"
-            tools:layout_editor_absoluteY="12dp" />
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="#FFF"
+            app:iconTint="#000"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:text="Profile"
-            android:textColor="@color/white"
+            android:text="Профіль"
+            android:textColor="#000000"
             android:textSize="20sp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="18dp"
-            android:paddingStart="84dp"/>
+            android:paddingStart="50dp"/>
 
     </com.google.android.material.appbar.MaterialToolbar>
 
@@ -50,7 +55,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.117"
-        android:src="@color/black"/>
+        android:src="@raw/avatar"
+        android:scaleType="centerCrop"
+        android:background="@drawable/avatar_shape"
+        android:clipToOutline="true"/>
 
     <TextView
         android:id="@+id/userName"
@@ -58,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="112dp"
-        android:text="User\nName"
+        android:text="Імʼя\nКористувача"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -80,24 +88,28 @@
         android:focusable="true">
 
         <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_person_24" />
+            android:src="@drawable/outline_person_24"
+            app:tint="#323232"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="48dp"
-            android:text="My Info"
+            android:text="Моя Інформація"
             android:textSize="20sp" />
 
         <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_gravity="end"
-            android:src="@drawable/ic_forward_24" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="320dp"
+            android:src="@drawable/ic_forward_24"
+            app:tint="#323232"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -115,24 +127,28 @@
         android:outlineSpotShadowColor="@color/white">
 
         <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_credit_card_24" />
+            android:src="@drawable/ic_credit_card_24"
+            app:tint="#323232"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="48dp"
-            android:text="Card Manager"
+            android:text="Менеджер карток"
             android:textSize="20sp" />
 
         <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_gravity="end"
-            android:src="@drawable/ic_forward_24" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="320dp"
+            android:src="@drawable/ic_forward_24"
+            app:tint="#323232"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -150,24 +166,28 @@
         android:outlineSpotShadowColor="@color/white">
 
         <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_premium_24" />
+            android:src="@drawable/ic_premium_24"
+            app:tint="#323232"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="48dp"
-            android:text="Upgrade to Premium"
+            android:text="Купити преміум"
             android:textSize="20sp" />
 
         <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_gravity="end"
-            android:src="@drawable/ic_forward_24" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="320dp"
+            android:src="@drawable/ic_forward_24"
+            app:tint="#323232"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -185,24 +205,28 @@
         android:outlineSpotShadowColor="@color/white">
 
         <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_settings_24" />
+            android:src="@drawable/outline_settings_24"
+            app:tint="#323232"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="48dp"
-            android:text="Settings"
+            android:text="Налаштування"
             android:textSize="20sp" />
 
         <ImageView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_gravity="end"
-            android:src="@drawable/ic_forward_24" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="320dp"
+            android:src="@drawable/ic_forward_24"
+            app:tint="#323232"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -210,7 +234,7 @@
         android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#A69DB8"
+        android:background="@drawable/bottomnav"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -219,36 +243,43 @@
             android:id="@+id/button13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:text="Дім"
             android:onClick="openHome"
-            android:text="Home"
             app:icon="@drawable/ic_home_24"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/button14"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button15"
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="#000"/>
 
         <Button
             android:id="@+id/button14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="Profile"
+            android:text="Профіль"
             app:icon="@drawable/ic_person_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button13"
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="#292929"
+            android:clickable="false"/>
 
         <Button
             android:id="@+id/button15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="openProgress"
-            android:text="Progress"
+            android:text="Прогрес"
             app:icon="@drawable/ic_chart_24"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button14"
-            app:layout_constraintStart_toEndOf="@+id/button13"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/button13"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="#000"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

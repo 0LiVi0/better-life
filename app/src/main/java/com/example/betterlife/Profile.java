@@ -27,7 +27,7 @@ public class Profile extends AppCompatActivity {
         String getUserLastName = intent.getStringExtra("userLastName");
 
         if (getUserFirstName == null) {
-            userName.setText("User\nName");
+            userName.setText("Імʼя\nКористувача");
         } else {
             userName.setText(getUserFirstName + "\n" + getUserLastName);
         }

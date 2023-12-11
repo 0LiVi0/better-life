@@ -4,39 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookConsultation">
+    tools:context=".BookConsultation"
+    android:background="#FFF">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:background="?attr/colorPrimary"
+        android:background="@drawable/header"
         app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="16dp">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="40dp"
             android:onClick="goBackSelfCare"
             android:paddingStart="16dp"
-            android:text="Back"
+            android:text="Назад"
+            android:textColor="#000"
+            android:fontFamily="sans-serif"
             app:icon="@drawable/ic_back_24"
-            tools:layout_editor_absoluteY="12dp" />
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="#FFF"
+            app:iconTint="#000"/>
 
         <TextView
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:paddingStart="36dp"
-            android:text="Book Consultation"
-            android:textColor="@color/white"
+            android:text="Бронювання"
+            android:textColor="#000000"
             android:textSize="20sp"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="18dp" />
+            tools:layout_editor_absoluteY="18dp"
+            android:paddingStart="40dp"/>
 
     </com.google.android.material.appbar.MaterialToolbar>
 
@@ -55,10 +60,12 @@
         android:layout_height="60dp"
         android:layout_margin="32dp"
         android:onClick="bookConsultation"
-        android:text="Book Consultation"
+        android:fontFamily="sans-serif"
+        android:text="Забронювати"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#000"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

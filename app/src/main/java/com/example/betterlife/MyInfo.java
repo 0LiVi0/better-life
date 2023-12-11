@@ -31,7 +31,7 @@ public class MyInfo extends AppCompatActivity {
                 intent.putExtra("userFirstName", getUserFirstName);
                 intent.putExtra("userLastName", getUserLastName);
                 startActivity(intent);
-                Toast.makeText(MyInfo.this, "Profile info updated successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MyInfo.this, "Профіль оновлений успішно!", Toast.LENGTH_SHORT).show();
             }
         });
     }

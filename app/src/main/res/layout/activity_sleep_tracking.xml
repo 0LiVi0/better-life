@@ -5,36 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SleepTracking"
-    android:background="@color/white">
+    android:background="#FFF">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:background="?attr/colorPrimary"
+        android:background="@drawable/header"
         app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="16dp">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="40dp"
             android:onClick="goBackSelfCare"
             android:paddingStart="16dp"
-            android:text="Back"
+            android:text="Назад"
+            android:textColor="#000"
+            android:fontFamily="sans-serif"
             app:icon="@drawable/ic_back_24"
-            tools:layout_editor_absoluteY="12dp" />
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="#FFF"
+            app:iconTint="#000"/>
 
         <TextView
-            android:layout_width="210dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:paddingStart="45dp"
-            android:text="Sleep Tracking"
-            android:textColor="@color/white"
+            android:text="Відслідковування сну"
+            android:textColor="#000000"
             android:textSize="20sp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="18dp" />
@@ -59,22 +62,26 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Finish"
+        android:fontFamily="sans-serif"
+        android:text="Закінчити"
         app:layout_constraintEnd_toStartOf="@+id/startButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sleepTimer" />
+        app:layout_constraintTop_toBottomOf="@+id/sleepTimer"
+        android:backgroundTint="#000"/>
 
     <Button
         android:id="@+id/startButton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Start"
+        android:fontFamily="sans-serif"
+        android:text="Розпочати"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/finishButton"
-        app:layout_constraintTop_toBottomOf="@+id/sleepTimer" />
+        app:layout_constraintTop_toBottomOf="@+id/sleepTimer"
+        android:backgroundTint="#000"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"

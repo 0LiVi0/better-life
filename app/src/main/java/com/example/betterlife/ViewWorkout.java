@@ -24,7 +24,7 @@ public class ViewWorkout extends AppCompatActivity {
         videoView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.squirrel;
+                String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.backvideo;
                 Uri uri = Uri.parse(videoPath);
                 videoView.setVideoURI(uri);
                 videoView.start();

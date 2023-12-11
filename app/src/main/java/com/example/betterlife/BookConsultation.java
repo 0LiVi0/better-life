@@ -48,7 +48,7 @@ public class BookConsultation extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(BookConsultation.this, SelfCare.class);
                 startActivity(intent);
-                Toast.makeText(BookConsultation.this, "Successfully booked on " + formattedDate, Toast.LENGTH_SHORT).show();
+                Toast.makeText(BookConsultation.this, "Успішно заброньовано на " + formattedDate, Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });

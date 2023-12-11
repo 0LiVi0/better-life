@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#FFF">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,7 +23,7 @@
             android:fontFamily="sans-serif"
             android:text="Better Life"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="#000000"
             android:textSize="20sp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="1dp"/>
@@ -31,36 +32,43 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="430dp"
-        android:layout_height="707dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_workouts"
             android:layout_width="356dp"
             android:layout_height="215dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:outlineSpotShadowColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:outlineSpotShadowColor="@color/white"
-            android:clickable="true"
-            android:focusable="true">
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="165dp"
-                android:src="@color/black" />
+                android:background="@drawable/curve_shape"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@raw/workout" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_gravity="bottom"
+                android:fontFamily="sans-serif"
                 android:onClick="openWorkouts"
-                android:text="Workouts"/>
-
+                android:text="Тренування"
+                android:textColor="@color/white"
+                android:backgroundTint="#000"/>
 
         </androidx.cardview.widget.CardView>
 
@@ -68,25 +76,30 @@
             android:id="@+id/card_nutrition"
             android:layout_width="356dp"
             android:layout_height="215dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="34dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:outlineSpotShadowColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_workouts"
-            android:outlineSpotShadowColor="@color/white"
-            android:clickable="true"
-            android:focusable="true">
+            app:layout_constraintTop_toBottomOf="@id/card_workouts">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="165dp"
-                android:src="@color/black" />
+                android:background="@drawable/curve_shape"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@raw/nutrition" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_gravity="bottom"
+                android:fontFamily="sans-serif"
                 android:onClick="openNutrition"
-                android:text="Nutrition" />
+                android:text="Харчування"
+                android:backgroundTint="#000"/>
 
 
         </androidx.cardview.widget.CardView>
@@ -95,23 +108,28 @@
             android:id="@+id/card_discipline"
             android:layout_width="356dp"
             android:layout_height="215dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="34dp"
+            android:outlineSpotShadowColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_nutrition"
-            android:outlineSpotShadowColor="@color/white">
+            app:layout_constraintTop_toBottomOf="@id/card_nutrition">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="165dp"
-                android:src="@color/black" />
+                android:background="@drawable/curve_shape"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@raw/wellbeing" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_gravity="bottom"
+                android:fontFamily="sans-serif"
                 android:onClick="openSelfCare"
-                android:text="Self-care" />
+                android:text="Добробут"
+                android:backgroundTint="#000"/>
 
 
         </androidx.cardview.widget.CardView>
@@ -123,7 +141,7 @@
         android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#A69DB8"
+        android:background="@drawable/bottomnav"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -132,36 +150,43 @@
             android:id="@+id/button13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="Home"
+            android:text="Дім"
             app:icon="@drawable/ic_home_24"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/button14"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button15"
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="#292929"
+            android:clickable="false"/>
 
         <Button
             android:id="@+id/button14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
             android:onClick="openProfile"
-            android:text="Profile"
+            android:text="Профіль"
             app:icon="@drawable/ic_person_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button13"
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="#000"/>
 
         <Button
             android:id="@+id/button15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="openProgress"
-            android:text="Progress"
+            android:text="Прогрес"
             app:icon="@drawable/ic_chart_24"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button14"
-            app:layout_constraintStart_toEndOf="@+id/button13"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toStartOf="@+id/button13"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="#000"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

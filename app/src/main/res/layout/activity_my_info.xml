@@ -5,38 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MyInfo"
-    android:background="@color/white">
+    android:background="#FFF">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="@drawable/header"
         app:contentInsetStart="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="16dp">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="40dp"
-            android:onClick="goBackProfile"
+            android:onClick="goBackChallenges"
             android:paddingStart="16dp"
-            android:text="Back"
+            android:text="Назад"
+            android:textColor="#000"
+            android:fontFamily="sans-serif"
             app:icon="@drawable/ic_back_24"
-            tools:layout_editor_absoluteY="12dp" />
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="#FFF"
+            app:iconTint="#000"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif"
-            android:text="My Info"
-            android:textColor="@color/white"
+            android:text="Моя інформація"
+            android:textColor="#000000"
             android:textSize="20sp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="18dp"
-            android:paddingStart="74dp"/>
+            android:paddingStart="30dp"/>
 
     </com.google.android.material.appbar.MaterialToolbar>
 
@@ -45,7 +50,10 @@
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:layout_marginTop="24dp"
-        android:src="@color/black"
+        android:src="@raw/avatar"
+        android:scaleType="centerCrop"
+        android:background="@drawable/avatar_shape"
+        android:clipToOutline="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +76,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:hint="First Name"
+            android:hint="Імʼя"
             tools:layout_editor_absoluteX="59dp"
             tools:layout_editor_absoluteY="345dp"/>
 
@@ -89,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Last Name"
+            android:hint="Прізвище"
             android:inputType="text"
             tools:layout_editor_absoluteX="59dp"
             tools:layout_editor_absoluteY="345dp" />
@@ -101,9 +109,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
-        android:text="Update Profile Info"
+        android:text="Оновити профіль"
+        android:fontFamily="sans-serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#000"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

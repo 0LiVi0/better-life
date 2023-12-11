@@ -41,8 +41,8 @@ public class SleepTracking extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 chronometer.stop();
-                sleepTitle.setText("Today's sleep");
-                sleepDescription.setText(chronometer.getText() + "  of sleep");
+                sleepTitle.setText("Сон сьогодні");
+                sleepDescription.setText(chronometer.getText() + "  хвилин сну");
                 chronometer.setBase(SystemClock.elapsedRealtime());
                 cardView.setVisibility(View.VISIBLE);
             }

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="30dp"
-        android:text="Book this event?"
+        android:text="Забронювати на цю дату?"
         android:textColor="@android:color/white"
         android:textSize="15dp"
         android:textStyle="bold"/>
@@ -27,24 +27,26 @@
             android:id="@+id/btn_yes"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:background="@android:color/white"
             android:clickable="true"
-            android:text="Yes"
+            android:fontFamily="sans-serif"
+            android:text="Так"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:focusable="true" />
+            android:focusable="true"
+            android:backgroundTint="#000"/>
 
         <Button
             android:id="@+id/btn_no"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_marginStart="5dp"
-            android:background="@android:color/white"
             android:clickable="true"
-            android:text="Cancel"
+            android:fontFamily="sans-serif"
+            android:text="Ні"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:focusable="true" />
+            android:focusable="true"
+            android:backgroundTint="#000"/>
     </LinearLayout>
 
 </LinearLayout>

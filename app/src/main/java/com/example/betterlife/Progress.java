@@ -25,6 +25,7 @@ public class Progress extends AppCompatActivity {
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView progressTitle = findViewById(R.id.progressTitle);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView progressDescription = findViewById(R.id.progressDescription);
 
+        //отримання даних від екрану Create Progress
         Intent intent = getIntent();
         String getProgressTitle = intent.getStringExtra("progressTitle");
         String getProgressDescription = intent.getStringExtra("progressCategory");

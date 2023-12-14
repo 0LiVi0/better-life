@@ -22,6 +22,7 @@ public class Profile extends AppCompatActivity {
 
         TextView userName = findViewById(R.id.userName);
 
+        //отримання даних від екрану My Info
         Intent intent = getIntent();
         String getUserFirstName = intent.getStringExtra("userFirstName");
         String getUserLastName = intent.getStringExtra("userLastName");
@@ -33,6 +34,7 @@ public class Profile extends AppCompatActivity {
         }
 
 
+        //відкриття My Info
         myInfoCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

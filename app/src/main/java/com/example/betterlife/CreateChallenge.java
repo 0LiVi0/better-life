@@ -23,7 +23,7 @@ public class CreateChallenge extends AppCompatActivity {
         setContentView(R.layout.activity_create_challenge);
 
         CalendarView calendarView = findViewById(R.id.calendarView2);
-        calendarView.setMinDate(System.currentTimeMillis() - 1000); //make past dates unavailable
+        calendarView.setMinDate(System.currentTimeMillis() - 1000); //встановлення попередніх днів неактивними
         long selectedDate = calendarView.getDate();
         String formattedDate = formatDate(selectedDate);
 
@@ -31,6 +31,7 @@ public class CreateChallenge extends AppCompatActivity {
         EditText challengeTasks = findViewById(R.id.challengeTasks);
 
         Button btnAddChallenge = findViewById(R.id.addChallenge);
+        //додавання челенджу
         btnAddChallenge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +44,7 @@ public class CreateChallenge extends AppCompatActivity {
         });
     }
 
+    //функція, яка перетворить дату з календаря у формат дд.мм.рррр
     private String formatDate(long dateInMillis) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
         Date date = new Date(dateInMillis);

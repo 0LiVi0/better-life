@@ -22,6 +22,7 @@ public class MyInfo extends AppCompatActivity {
         EditText userFirstName = findViewById(R.id.userFirstName);
         EditText userLastName = findViewById(R.id.userLastName);
 
+        //опрацювання вводу користувача та передача даних екрану Profile
         updateProfileInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

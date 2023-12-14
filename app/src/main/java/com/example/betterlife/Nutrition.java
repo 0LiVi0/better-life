@@ -22,7 +22,7 @@ public class Nutrition extends AppCompatActivity {
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView mealName = findViewById(R.id.mealTitle);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView mealDescription = findViewById(R.id.mealDescription);
 
-
+        //отримання даних від екрану Create Nutrition
         Intent intent = getIntent();
         String getMealName = intent.getStringExtra("mealName");
         String getMealDescription = intent.getStringExtra("mealCalories") + " cal / " +

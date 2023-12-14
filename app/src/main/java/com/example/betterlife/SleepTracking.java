@@ -30,6 +30,7 @@ public class SleepTracking extends AppCompatActivity {
         TextView sleepTitle = findViewById(R.id.sleepTitle);
         TextView sleepDescription = findViewById(R.id.sleepDescription);
 
+        //запуск таймера при натисканні на Старт
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,6 +38,7 @@ public class SleepTracking extends AppCompatActivity {
             }
         });
 
+        //зупинка таймеру і додавання запису
         finishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

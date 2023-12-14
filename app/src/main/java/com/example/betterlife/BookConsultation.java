@@ -24,10 +24,11 @@ public class BookConsultation extends AppCompatActivity {
         setContentView(R.layout.activity_book_consultation);
 
         CalendarView calendarView = findViewById(R.id.calendarView);
-        calendarView.setMinDate(System.currentTimeMillis() - 1000); //make past days unavailable
+        calendarView.setMinDate(System.currentTimeMillis() - 1000); //встановлення попередніх днів неактивними
         long selectedDate = calendarView.getDate();
         String formattedDate = formatDate(selectedDate);
 
+        //створення діалогового вікна
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog);
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -36,6 +37,7 @@ public class BookConsultation extends AppCompatActivity {
         btnDialogYes = dialog.findViewById(R.id.btn_yes);
         btnDialogCancel = dialog.findViewById(R.id.btn_no);
 
+        //опрацювання кнопки Ні на діалоговому вікні
         btnDialogCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +45,7 @@ public class BookConsultation extends AppCompatActivity {
             }
         });
 
+        //опрацювання кнопки Так на діалоговому вікні
         btnDialogYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +56,7 @@ public class BookConsultation extends AppCompatActivity {
             }
         });
 
+        //відображення діалогу
         Button bookConsultation = findViewById(R.id.bookConsultation);
         bookConsultation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +66,7 @@ public class BookConsultation extends AppCompatActivity {
         });
 
     }
-
+    //функція, яка перетворить дату з календаря у формат дд.мм.рррр
     private String formatDate(long dateInMillis) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
         Date date = new Date(dateInMillis);

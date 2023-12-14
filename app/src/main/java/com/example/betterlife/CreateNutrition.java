@@ -23,6 +23,7 @@ public class CreateNutrition extends AppCompatActivity {
         startActivity(new Intent(this, Nutrition.class));
     }
 
+    //створення нового харчування та передача даних екрану Nutrition
     public void addNewMeal(View view) {
         EditText mealName = findViewById(R.id.mealName);
         EditText mealWeight = findViewById(R.id.mealWeight);

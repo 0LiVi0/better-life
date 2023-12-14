@@ -23,6 +23,7 @@ public class Challenges extends AppCompatActivity {
         TextView challengeDeadline = findViewById(R.id.challengeDeadline1);
         TextView challengeTasks = findViewById(R.id.challengeTasks1);
 
+        //отримання даних від екрану Create Challenge
         Intent intent = getIntent();
         String getChallengeTitle = intent.getStringExtra("challengeTitle");
         String getChallegneDeadline = intent.getStringExtra("challengeDeadline");

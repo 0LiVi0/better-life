@@ -21,6 +21,8 @@ public class ViewWorkout extends AppCompatActivity {
         setContentView(R.layout.activity_view_workout);
 
         VideoView videoView = findViewById(R.id.videoView);
+
+        //запуск відео після натискання
         videoView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -21,6 +21,7 @@ public class CreateProgress extends AppCompatActivity {
         startActivity(new Intent(this, Progress.class));
     }
 
+    //створення нового прогресу та передача даних екрану Progress
     public void addNewProgress(View view) {
         EditText progressTitle = findViewById(R.id.progressTitleInput);
         EditText progressCategory = findViewById(R.id.progressCategoryInput);

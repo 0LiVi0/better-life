@@ -17,6 +17,8 @@ public class Workouts extends AppCompatActivity {
         setContentView(R.layout.activity_workouts);
 
         CardView cardView = findViewById(R.id.cardView);
+
+        //Відкрити конкретне тренування
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
